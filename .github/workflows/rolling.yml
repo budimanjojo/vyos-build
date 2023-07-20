@@ -67,7 +67,9 @@ jobs:
               --custom-package "moreutils" \
               --custom-package "tree"
 
-      - run: ls -lah ./vyos-build/build
+      - run: |
+          ls -lah ./vyos-build/build
+          tree ./vyos-build/build
       - name: Create release with artifact
         uses: ncipollo/release-action@a2e71bdd4e7dab70ca26a852f29600c98b33153e # v1
         with:

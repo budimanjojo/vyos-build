@@ -68,7 +68,7 @@ jobs:
               --custom-package "tree"
 
       - run: |
-          find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
+          find ./vyos-build/build | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
           echo "\n\n"
           ls -lah ./vyos-build/build
       - name: Create release with artifact
